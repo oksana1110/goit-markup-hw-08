@@ -1,0 +1,35 @@
+.features__list {
+    display: flex;
+}
+
+.features__item {
+    flex-wrap: wrap;
+    margin-right: 30px;
+    &:last-child {
+            margin-right: 0px;
+        };
+}
+
+.features__title {
+    padding-bottom: 10px;
+    font-weight: 700;
+    @include font(14, 1.14, 0.03);
+    text-transform: uppercase;
+}
+
+.features__text {
+    @include font(14, 1.71, 0.03);
+    color: var(--font-color);
+}
+
+.feature__icon {
+    width: 270px;
+    height: 120px;
+    display: flex;
+    background-repeat: no-repeat;
+    background-color: #F5F4FA;
+    margin-bottom: 30px;
+    align-items: center;
+    justify-content: center;
+    background-size: contain;
+}
