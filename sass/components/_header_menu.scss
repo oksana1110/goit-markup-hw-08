@@ -1,0 +1,107 @@
+.menu__button {
+    display: inline-flex;
+    align-items: flex-end;
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    background-color: transparent;
+
+    &:hover .icon__menu,
+    &:focus .icon__menu {
+        fill: (var(--active-color));};    ;
+
+    &:hover .icon__close,
+    &:focus .icon__close {
+        fill: (var(--active-color));};
+@media screen and (min-width: 768px){
+    display: none;
+ }
+}
+
+.menu__button .icon__menu {
+    display: none;
+}
+
+.menu__button.is-open .icon__menu {
+    display: block;
+}
+
+.menu__button.is-open .icon__close {
+    display: none;
+}
+
+.menu__container {
+    display: none;
+    background-color: #ffff;
+    padding: 40px;
+    text-align: left;
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    width: 100%;
+    height: 796px;
+
+    &.is-open {
+        display: block;
+    }
+
+}
+
+
+.menu__nav--item {
+    font-family: 'Roboto' sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+    @include font(40, 1.17, 0.02);
+    line-height: 100%;
+    text-align: left;
+    color: #212121;
+    margin-bottom: 32px;
+
+    &:last-child {
+        margin-bottom: 0px;};
+}
+
+
+
+.menu__address {
+    margin-top: 306px;
+}
+
+.menu__address--tel {
+    font-weight: 500;
+    @include font(34, 1.17, 0.02);
+    text-align: left;
+    color: var(--active-color);
+    
+}
+
+.menu__address--mail {
+    font-family: 'Roboto' sans-serif;
+    font-weight: 500;
+    @include font(24, 1.16, 0.02);
+    color: #757575;
+    margin-top: 32px;
+}
+
+.menu__cos--item {
+    &:not(:last-child) {
+        margin-right: 20px;
+    }
+}
+
+.menu__cos--link {
+    font-family: 'Roboto' sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+    @include font(18, 1.22, 0.02);
+    line-height: 100%;
+    color: var(--active-color);
+
+}
+
+.menu__cos--list {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 64px;
+}

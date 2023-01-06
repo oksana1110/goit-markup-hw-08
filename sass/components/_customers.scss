@@ -5,11 +5,10 @@
 }
 
 .customers__list {
-     
-   display: flex;
+     display: flex;
     justify-content: center;
     align-items: center;
-    
+      
 }
 .customers__icon {
     fill: #afb1b8;
@@ -24,6 +23,7 @@
      &:focus .customers__icon {
             fill: var(--active-color);
         };
+  
         
 }
 .customers__link {

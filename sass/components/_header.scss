@@ -1,20 +1,29 @@
 .header__nav--logo {
-    margin-top: 24px;
-    margin-bottom: 25px;
+    margin: 16px  15px;
     font-family: 'Raleway';
     font-weight: 700;
-    @include font(26, 1.19, 0.03);
+    @include font(24, 1.16, 0.03);
     color: var(--active-color-two);
+    @media screen and (min-width: 768px){
+        margin: 26px 15px;
+    };
+    @media screen and (min-width: 1200px){
+    margin-top: 24px;
+     margin-bottom: 25px;
+    };
+    
 }
 
 a.header__nav--logo {
-    color: var(--active-color-two);
-    margin-right: 50px;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    color: var(--active-color-two);   
+      transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
         &:hover,
         &:focus {
             color: var(--active-color);
         };
+    @media screen and (min-width: 768px){
+                margin-right: 50px;
+            }
 }
 
 .header__nav--logo--text {
@@ -43,8 +52,12 @@ a.header__nav--logo {
             height: 4px;
             background-color: rgba(33, 150, 243, 1);
             border-radius: 2px;
-            transform: translateY(32px);
+            transform: translateY(27px);
             transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+            @media screen and (min-width: 1200px) {
+                transform: translateY(32px);
+                transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+            };
         };
         &:hover,
         &:focus {
@@ -55,21 +68,45 @@ a.header__nav--logo {
     color: var(--active-color);
 
 }
-
+.header{
+    position: relative;
+}
 .header__nav--item {
     margin-right: 50px;
-    padding: 10px 0px;
-        &:last-child {
+            &:last-child {
             margin-right: 0px;
         };
+    margin-top: 24px;
+    margin-bottom: 25px;
+    @media screen and (min-width: 1200px){
+        padding: 10px 0px;
+    };
 }
 .header__nav--list,
 .header__address {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: none;
+   
+    @media screen and (min-width: 768px) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        };
+        @media screen and (min-width: 1200px){
+                display: flex;
+                align-items: center;
+                justify-content: center;
+        }
 }
-
+.header__address{
+    @media screen and (min-width: 768px) {
+            display: block;
+        };
+    @media screen and (min-width: 1200px) {
+            display: flex;
+        }
+    
+        ;
+}
 .header__nav {
     display: flex;
     align-items: center;
@@ -94,7 +131,7 @@ a.header__nav--logo {
 .header__address--tel {
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
         &:hover,
-        &:focus {
+        &:focus{
             color: var(--active-color);
         };
 }
@@ -115,4 +152,9 @@ a.header__nav--logo {
         @include font(14, 1.14, 0.02);
         line-height: 100%;
         color: #757575;
+@media screen and (min-width: 768px){
+    &:not(:last-child){
+        margin-bottom: 10px;
+    }
+}
 }
