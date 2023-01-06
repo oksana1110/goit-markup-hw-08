@@ -62,17 +62,19 @@
         margin-bottom: 0px;};
 }
 
-
-
-.menu__address {
-    margin-top: 306px;
-}
+.menu__nav--list{
+    margin-bottom: 280px;
+    &.menu__nav--item:hover,
+    &.menu__nav--item:focus {
+        color: var(--active-color);
+};}
 
 .menu__address--tel {
     font-weight: 500;
     @include font(34, 1.17, 0.02);
     text-align: left;
     color: var(--active-color);
+    margin-bottom: 32px;
     
 }
 
@@ -81,9 +83,11 @@
     font-weight: 500;
     @include font(24, 1.16, 0.02);
     color: #757575;
-    margin-top: 32px;
+    
 }
-
+.menu__addr{
+    margin-bottom: 32px;
+}
 .menu__cos--item {
     &:not(:last-child) {
         margin-right: 20px;

@@ -17,7 +17,6 @@
  
  <link rel="stylesheet" href="./css/main.min.css">
 </head>
-
 <body>
     <header class="head">
         <section class="header container">
@@ -93,13 +92,13 @@
     </header>
     <main>
         
-        <!-- <section class="hero">
+        <section class="hero">
                 <div class="container">
                     <h1 class="hero__title">Ефективні рішення для вашого бізнесу</h1>
                     <button type="button" class="hero__btn " data-modal-open>Замовити послугу</button>
                 </div>
                 
-            </section>-->
+            </section>
         
         <section class="features section">
             
@@ -152,16 +151,33 @@
                 <ul class="work__list">
                     <li class="work__item">
                         <div class="work__wrap">
-                        <img src="./images/what_we_do_1.jpg" alt="Чоловік пише код" width="370" />
+                        <img srcset="./images/what_we_do_1.jpg 1x, ./images/what_we_do_1_2x.jpg 2x,"
+                        src="./images/what_we_do_1.jpg" 
+                        alt="Чоловік пише код" width="370" />
+                        <picture>
+                            <source srcset="./images/what_we_do_1_1x.jpg 1x, ./images/what_we_do_1_2x.jpg 2x "
+                            media="(min-width: 1200px)">
+                        </picture>
                     <h3 class="work__cover--text">ДЕСКТОПНІ ДОДАТКИ</h3></div>
                      </li>
                     <li class="work__item">
                         <div class="work__wrap">
-                        <img src="./images/what_we_do_2.jpg" alt="Людина тестує мобільний додаток" width="370" />
+                        <img srcset="./images/what_we_do_2.jpg 1x, ./images/what_we_do_2_2x.jpg 2x,"
+                        src="./images/what_we_do_2.jpg" 
+                        alt="Людина тестує мобільний додаток" width="370" />
+                        <picture>
+                            <source srcset="./images/what_we_do_2_1x.jpg 1x, ./images/what_we_do_2_2x.jpg 2x " media="(min-width: 1200px)">
+                        </picture>
                         <h3 class="work__cover--text">МОБІЛЬНІ ДОДАТКИ</h3></div>
                     </li>
                     <li class="work__item">
-                        <div class="work__wrap"><img src="./images/what_we_do_3.jpg" alt="Дизайнер вибирає колір для макету" width="370" />
+                        <div class="work__wrap">
+                            <img srcset="./images/what_we_do_3.jpg 1x, ./images/what_we_do_3_2x.jpg 2x,"
+                            src="./images/what_we_do_3.jpg" 
+                            alt="Дизайнер вибирає колір для макету" width="370" />
+                            <picture>
+                                <source srcset="./images/what_we_do_3_1x.jpg 1x, ./images/what_we_do_3_2x.jpg 2x " media="(min-width: 1200px)">
+                            </picture>
                        <h3 class="work__cover--text">ДИЗАЙНЕРСЬКІ РІШЕННЯ</h3> </div>
                         
                     </li>
@@ -174,7 +190,18 @@
                 <h2 class="team__title">Наша команда</h2>
                 <ul class="team__list">
                     <li class="team__item">
-                        <img src="./images/Igor.jpg" alt="Чоловік в окулярах" width="270">
+                        <img srcset="./images/Igor.jpg 1x, ./images/Igor_2x.jpg 2x "
+                        src="./images/Igor.jpg"
+                         alt="Чоловік в окулярах" width="270">
+
+                         <picture>
+                            <source srcset="./images/Igor.jpg 1x, ./images/Igor_2x.jpg 2x "
+                            media="(min-width: 1200px)">
+                            <source srcset="./images/Igor_tab_1x.jpg 1x, ./images/Igor_tab_2x.jpg 2x "
+                            media="(min-width: 768px)">
+                            <source srcset="./images/Igor_mob_1x.jpg 1x, ./images/Igor_mob_2x.jpg 2x "
+                            media="(min-width: 480px)">
+                         </picture>
                         <div class="team__border">
                             <h3 class="team__title--second">Ігор Дем'яненко</h3>
                             <p class="team__title--third">Product Designer</p>
@@ -205,7 +232,14 @@
                         
                     </li>
                     <li class="team__item">
-                        <img src="./images/Olga.jpg" alt="Жінка в окулярах" width="270">
+                        <img srcset="./images/Olga.jpg 1x, ./images/Olga_2x.jpg 2x"
+                        src="./images/Olga.jpg" 
+                        alt="Жінка в окулярах" width="270">
+                        <picture>
+                            <source srcset="./images/Olga.jpg 1x, ./images/Olga_2x.jpg 2x" media="(min-width: 1200px)" >
+                            <source srcset="./images/Olga_tab_1x.jpg 1x, ./images/Olga_tab_2x.jpg 2x " media="(min-width: 768px)">
+                            <source srcset="./images/Olga_mob_1x.jpg 1x, ./images/Olga_mob_2x.jpg 2x " media="(min-width: 480px)">
+                        </picture>
                         <div class="team__border">
                        
                             <h3 class="team__title--second">Ольга Рєпіна</h3>
@@ -236,7 +270,14 @@
                         
                     </li>
                     <li class="team__item">
-                        <img src="./images/Mykhola.jpg" alt="Чоловік в сорочці" width="270">
+                        <img srcset="./images/Mykhola.jpg 1x, ./images/Mykhola_2x.jpg 2x"
+                        src="./images/Mykhola.jpg"
+                         alt="Чоловік в сорочці" width="270">
+                        <picture>
+                            <source srcset="./images/Mykhola.jpg 1x, ./images/Mykhola_2x.jpg 2x" media="(min-width: 1200px)">
+                            <source srcset="./images/Mykhola_tab_1x.jpg 1x, ./images/Mykhola_tab_2x.jpg 2x " media="(min-width: 768px)">
+                            <source srcset="./images/Mykhola_mob_1x.jpg 1x, ./images/Mykhola_mob_2x.jpg 2x " media="(min-width: 480px)">
+                        </picture>
                         <div class="team__border">
                             <h3 class="team__title--second">Микола Тарасов</h3>
                             <p class="team__title--third">Marketing</p>
@@ -266,7 +307,14 @@
                         
                     </li>
                     <li class="team__item">
-                        <img src="./images/Mykhailo.jpg" alt="Чоловік у футболці" width="270">
+                        <img srcset="./images/Mykhailo.jpg 1x, ./images/Mykhailo_2x.jpg 2x"
+                        src="./images/Mykhailo.jpg" a
+                        lt="Чоловік у футболці" width="270">
+                        <picture>
+                            <source srcset="./images/Mykhailo.jpg 1x, ./images/Mykhailo_2x.jpg 2x" media="(min-width: 1200px)">
+                            <source srcset="./images/Mykhailo_tab_1x.jpg 1x, ./images/Mykhailo_tab_1x.jpg 2x " media="(min-width: 768px)">
+                            <source srcset="./images/Mykhailo_mob_1x.jpg 1x, ./images/Mykhailo_mob_2x.jpg 2x " media="(min-width: 480px)">
+                        </picture>
                         <div class="team__border">
                             <h3 class="team__title--second">Михайло Єрмаков</h3>
                             <p class="team__title--third">UI Designer</p>
@@ -299,7 +347,7 @@
             </div>
 
         </section>
-      <!--<section class="customers section">
+      <section class="customers section">
             <div class="container">
                 <h2 class="customers__title">Постійні клієнти</h2>
                 <ul class="customers__list">
@@ -335,12 +383,12 @@
                     </a></li>
                 </ul>
             </div>
-        </section>-->
+        </section>
 
 
 
     </main>
-<!--<footer class="footer">
+<footer class="footer">
     <div class="container footer__icons">
         <div class="footer__soc--icon">
         <a href="./index.html" class="footer__link--logo link">
@@ -402,7 +450,7 @@
     </div>
 
 
-</footer>-->
+</footer>
 <div class="backdrop is-hidden" data-modal>
     <!--Вікно замовити постугу--> 
 

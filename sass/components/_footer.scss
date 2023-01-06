@@ -4,11 +4,16 @@
     padding: 60px 0px;
 }
 .footer__link--logo {
-
+    @include font(24, calc(28/24), 0.03);
     font-family: 'Raleway';
     font-weight: 700;
-    @include font(26, 1.19, 0.03);
     color: var(--active-color-two);
+    margin-top: 60px;
+    margin-bottom: 28px;
+
+    @media screen and (min-width: 1200px){
+         @include font(26, 1.19, 0.03);
+    };
 }
 .footer__logo {
     color: var(--primary-color);
@@ -24,7 +29,7 @@
 .auth__address--list {
     font-style: normal;
 }
-.address__link {
+.address__link 
     font-family: 'roboto', sans-serif;
     font-weight: 400;
     @include font(14, 1.71, 0.03);
@@ -56,8 +61,10 @@
 }
 
 .footer__icons {
-    display: flex;
-    justify-content: baseline;
+    display: block;
+    text-align: center;
+   /* display: flex;
+    justify-content: baseline;*/
 }
 
 .footer__list {
