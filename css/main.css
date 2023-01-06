@@ -82,6 +82,10 @@ img {
   }
 }
 
+.head {
+  padding: auto 200px;
+}
+
 .header__nav--logo {
   margin: 16px 15px;
   font-family: "Raleway";
@@ -794,7 +798,12 @@ a.header__nav--logo:hover, a.header__nav--logo:focus {
 .footer {
   max-width: 1600px;
   background-color: #2F303A;
-  padding: 60px 0px;
+  padding-top: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .footer {
+    padding: 60px 60px;
+  }
 }
 
 .footer__link--logo {

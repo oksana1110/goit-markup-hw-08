@@ -1,7 +1,9 @@
 .footer {
     max-width: 1600px;
     background-color: #2F303A;
-    padding: 60px 0px;
+    padding-top: 60px;
+    @media screen and (min-width: 1200px){
+    padding: 60px 60px;};
     
 }
 .footer__link--logo {
