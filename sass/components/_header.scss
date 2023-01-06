@@ -95,7 +95,7 @@ a.header__nav--logo {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-        }
+        };
 }
 .header__address{
     @media screen and (min-width: 768px) {
@@ -103,6 +103,8 @@ a.header__nav--logo {
         };
     @media screen and (min-width: 1200px) {
             display: flex;
+            align-items: center;
+            justify-content: center;
         }
     
         ;
@@ -152,9 +154,6 @@ a.header__nav--logo {
         @include font(14, 1.14, 0.02);
         line-height: 100%;
         color: #757575;
-@media screen and (min-width: 768px){
-    &:not(:last-child){
-        margin-bottom: 10px;
-    }
+
 }
-}
+
