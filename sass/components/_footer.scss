@@ -1,9 +1,7 @@
 .footer {
     max-width: 1600px;
     background-color: #2F303A;
-    padding-top: 60px;
-    @media screen and (min-width: 1200px){
-    padding: 60px 60px;};
+    padding: 60px 60px;
     
 }
 .footer__link--logo {
@@ -69,6 +67,7 @@
 }
 
 .footer__icons {
+    
     display: block;
     text-align: center;
     align-items: center;
@@ -120,9 +119,7 @@
     @media screen and (min-width: 1200px){
         text-align: left;
     };
-    
-    
-    
+      
 }
 
 .footer__input {
@@ -133,11 +130,13 @@
     border-radius: 4px;
     border-width: 1px;
     padding-left: 16px;
-    margin-right: 12px;
+    
        &:not(placeholder-shown) {
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);};
+    
     @media screen and (min-width: 1200px){
             width: 358px;
+            margin-right: 12px;
         };
 }
 
@@ -170,6 +169,7 @@
     border: transparent;
     cursor: pointer;
     margin-top: 20px;
+    
 
 }
 
@@ -181,10 +181,12 @@
 }
 
 .footer__soc--icons {
-    @media screen and (max-width: 767px){
-        margin: 60px 137px;};
+        margin-top: 60px;
+        margin-bottom: 60px;
     @media screen and (min-width: 768px){
-    margin-left:  137px;        
+    margin-left:  137px; 
+    margin-top: 0px;
+          
     };
       
    

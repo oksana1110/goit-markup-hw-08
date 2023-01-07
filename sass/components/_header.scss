@@ -1,5 +1,14 @@
 .head{
     padding: auto 200px}
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.head {
+    border-bottom: 1px #ECECEC solid;
+}
 .header__nav--logo {
     margin: 16px  15px;
     font-family: 'Raleway';
@@ -80,7 +89,7 @@ a.header__nav--logo {
         };
     margin-top: 24px;
     margin-bottom: 25px;
-    @media screen and (min-width: 1200px){
+   @media screen and (min-width: 1200px){
         padding: 10px 0px;
     };
 }
@@ -103,26 +112,18 @@ a.header__nav--logo {
     @media screen and (min-width: 768px) {
             display: block;
         };
-    @media screen and (min-width: 1200px) {
+   @media screen and (min-width: 1200px) {
             display: flex;
             align-items: center;
             justify-content: center;
-        }
-    
-        ;
+            
+        };
 }
 .header__nav {
     display: flex;
     align-items: center;
 }
-.header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.head {
-    border-bottom: 1px #ECECEC solid;
-}
+
 .header__address--mail {
     margin-right: 40px;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -130,19 +131,23 @@ a.header__nav--logo {
         &:focus {
             color: var(--active-color);
         };
+   
 }
 
 .header__address--tel {
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
         &:hover,
         &:focus{
             color: var(--active-color);
         };
 }
-
+.header__address--mail,
+.header__address--tel{
+    position: relative;
+}
 .header__icons--tel,
 .header__icon--mail {
-    
+    position: absolute;
     fill: currentColor;
     margin-right: 10px;
 }
@@ -156,6 +161,11 @@ a.header__nav--logo {
         @include font(14, 1.14, 0.02);
         line-height: 100%;
         color: #757575;
-
+@media screen and (min-width: 768px) {
+        margin-bottom: 10px;
+    };
+        @media screen and (min-width: 1200px){
+            margin-bottom: 0px;
+        }
 }
 
