@@ -916,7 +916,7 @@ a.header__nav--logo:hover, a.header__nav--logo:focus {
 @media screen and (min-width: 1200px) {
   .footer__icons {
     flex-wrap: nowrap;
-    align-items: center;
+    align-items: baseline;
     text-align: left;
   }
 }
