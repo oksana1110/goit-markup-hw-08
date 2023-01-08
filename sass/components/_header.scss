@@ -148,8 +148,10 @@ a.header__nav--logo {
 .header__icons--tel,
 .header__icon--mail {
     position: absolute;
+    left: -20px;
     fill: currentColor;
     margin-right: 10px;
+    
 }
 
 .header__icons--tel {

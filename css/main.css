@@ -257,6 +257,7 @@ a.header__nav--logo:hover, a.header__nav--logo:focus {
 .header__icons--tel,
 .header__icon--mail {
   position: absolute;
+  left: -20px;
   fill: currentColor;
   margin-right: 10px;
 }
@@ -817,7 +818,7 @@ a.header__nav--logo:hover, a.header__nav--logo:focus {
 .footer {
   max-width: 1600px;
   background-color: #2F303A;
-  padding: 60px 60px;
+  padding: 60px 0px;
 }
 
 .footer__link--logo {
@@ -828,7 +829,6 @@ a.header__nav--logo:hover, a.header__nav--logo:focus {
   font-weight: 700;
   color: var(--active-color-two);
   margin-top: 60px;
-  margin-bottom: 28px;
 }
 @media screen and (min-width: 1200px) {
   .footer__link--logo {
@@ -840,7 +840,7 @@ a.header__nav--logo:hover, a.header__nav--logo:focus {
 
 .footer__logo {
   color: var(--primary-color);
-  margin-bottom: 28px;
+  margin-bottom: 22px;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer__logo:hover, .footer__logo:focus {
@@ -915,10 +915,9 @@ a.header__nav--logo:hover, a.header__nav--logo:focus {
 }
 @media screen and (min-width: 1200px) {
   .footer__icons {
-    display: flex;
-    justify-content: center;
     flex-wrap: nowrap;
     align-items: center;
+    text-align: left;
   }
 }
 
@@ -961,6 +960,7 @@ a.header__nav--logo:hover, a.header__nav--logo:focus {
 @media screen and (min-width: 1200px) {
   .footer__input--title {
     text-align: left;
+    background-position: top;
   }
 }
 
@@ -985,16 +985,18 @@ a.header__nav--logo:hover, a.header__nav--logo:focus {
 
 @media screen and (max-width: 767px) {
   .footer__input--sec {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: block;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer__input--sec {
+    margin-top: 92px;
   }
 }
 @media screen and (min-width: 1200px) {
   .footer__input--sec {
     margin-left: 93px;
-    display: flex;
+    margin-top: 0px;
   }
 }
 
@@ -1013,6 +1015,12 @@ a.header__nav--logo:hover, a.header__nav--logo:focus {
   border: transparent;
   cursor: pointer;
   margin-top: 20px;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 1200px) {
+  .footer__btn {
+    margin-top: 0px;
+  }
 }
 
 .footer__btn--icon {
@@ -1033,16 +1041,14 @@ a.header__nav--logo:hover, a.header__nav--logo:focus {
   }
 }
 
-@media screen and (min-width: 768px) {
-  .footer__tab {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 60px;
-  }
+.footer__input--wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 @media screen and (min-width: 1200px) {
-  .footer__tab {
-    text-align: left;
+  .footer__input--wrap {
+    flex-wrap: nowrap;
   }
 }
 
