@@ -64,7 +64,9 @@ img {
   width: 100%;
   padding-left: 15px;
   padding-right: 15px;
-  margin: auto;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
 }
 @media screen and (min-width: 480px) {
   .container {
@@ -79,7 +81,6 @@ img {
 @media screen and (min-width: 1200px) {
   .container {
     width: 1200px;
-    margin: 0px;
   }
 }
 
@@ -88,11 +89,23 @@ img {
 }
 
 .header {
-  /*max-width: 1200px;*/
+  position: relative;
   width: 100%;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
+}
+@media screen and (min-width: 768px) {
+  .header {
+    align-items: center;
+    justify-content: space-around;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
 }
 
 .head {
@@ -130,6 +143,11 @@ a.header__nav--logo:hover, a.header__nav--logo:focus {
 @media screen and (min-width: 768px) {
   a.header__nav--logo {
     margin-right: 50px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  a.header__nav--logo {
+    margin-right: 90px;
   }
 }
 
@@ -288,10 +306,6 @@ a.header__nav--logo:hover, a.header__nav--logo:focus {
   }
 }
 
-.header {
-  position: relative;
-}
-
 .menu__button {
   display: inline-flex;
   align-items: flex-end;
@@ -325,23 +339,24 @@ a.header__nav--logo:hover, a.header__nav--logo:focus {
 }
 
 .menu__container {
-  display: none;
-  background-color: white;
-  padding: 40px 48px;
-  text-align: left;
   position: absolute;
-  top: 100%;
-  left: 0%;
-  width: 100vw;
-  height: 3000px;
+  overflow-y: scroll;
   z-index: 1000;
-  /* position: absolute;
-   overflow-y: scroll;
-   z-index: 1000;
-   width: 100vw;
-   height: 100vh;
-   top: 20px;
-   left: 0px;*/
+  width: 100vw;
+  height: 100vh;
+  top: 0px;
+  left: 0px;
+  background-color: var(--primary-color);
+  /*display: none;
+    background-color: #ffff;
+    padding: 40px 48px;
+    text-align: left;
+  position: fixed;
+    top: 100%;
+    left: 0%;
+    width: 100vw;
+    height: 3000px;
+    z-index: 1000;*/
 }
 .menu__container.is-open {
   display: block;
@@ -406,7 +421,7 @@ a.header__nav--logo:hover, a.header__nav--logo:focus {
   letter-spacing: 0.02em;
   line-height: 100%;
   color: var(--active-color);
-  border-right: 1px solid rgba(33, 33, 33, 0.2);
+  border-right: 1px solid #757575;
   padding-right: 10px;
 }
 
