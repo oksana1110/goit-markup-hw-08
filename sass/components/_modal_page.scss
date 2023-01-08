@@ -190,9 +190,11 @@
 
 };
 }
-
-@media screen and (min-width: 1200px){
-.modal__link {
-        margin-left: 5px;
+.modal__link{
+    @media screen and (min-width: 768px){
+     margin-left: 3px;
+    };
+    @media screen and (min-width: 1200px){
+     margin-left: 5px;
     };
 }
