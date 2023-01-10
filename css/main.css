@@ -89,14 +89,15 @@ img {
 }
 
 .header {
+  position: relative;
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 @media screen and (min-width: 768px) {
   .header {
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -196,10 +197,6 @@ a.header__nav--logo:hover, a.header__nav--logo:focus {
   color: var(--active-color);
 }
 
-.header {
-  position: relative;
-}
-
 .header__nav--item {
   margin-right: 50px;
   margin-top: 24px;
@@ -294,8 +291,8 @@ a.header__nav--logo:hover, a.header__nav--logo:focus {
   line-height: 100%;
   color: #757575;
 }
-@media screen and (min-width: 768px) {
-  .header__icon {
+@media screen and (max-width: 1199px) {
+  .header__icon:not(:last-child) {
     margin-bottom: 10px;
   }
 }
@@ -305,64 +302,171 @@ a.header__nav--logo:hover, a.header__nav--logo:focus {
   }
 }
 
-.menu__button {
-  display: inline-flex;
-  align-items: flex-end;
-  margin: 0px;
-  padding: 0px;
-  border: none;
-  background-color: transparent;
+/*.menu__button {
+    display: inline-flex;
+    align-items: flex-end;
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    background-color: transparent;
+
+    &:hover .icon__menu,
+    &:focus .icon__menu {
+        fill: (var(--active-color));
+    };
+    &:hover .icon__close,
+    &:focus .icon__close {
+        fill: (var(--active-color));
+    };
+
+    @media screen and (min-width: 768px) {
+        display: none;
+    };
 }
-.menu__button:hover .icon__menu, .menu__button:focus .icon__menu {
-  fill: var(--active-color);
+
+.menu__button .icon__menu {
+    display: none;
 }
-.menu__button:hover .icon__close, .menu__button:focus .icon__close {
-  fill: var(--active-color);
+
+.menu__button.is-open .icon__menu {
+    display: block;
 }
+
+.menu__button.is-open .icon__close {
+    display: none;
+}
+
+.menu__container {
+    display: none;
+    background-color: rgba(255, 255, 255, 0.655);
+    padding: 40px 48px;
+    text-align: left;
+    position: fixed;
+    top: 50px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+
+overflow-y: scroll;
+
+
+}
+.is-hidden{
+    opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+
+}
+.menu__container{
+    opacity: 1;
+    visibility: visible;
+    pointer-events: initial;
+}
+
+
+.menu__content{
+    height: 100vh;
+        width: 100%;
+        margin: 0px auto;
+        padding: 0 15px;
+}
+
+.menu__nav--item {
+    font-family: 'Roboto' sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+    @include font(40, 1.17, 0.02);
+    line-height: 100%;
+    text-align: left;
+    color: #212121;
+    margin-bottom: 32px;
+
+    &:last-child {
+        margin-bottom: 0px;
+    }
+
+    ;
+}
+
+.menu__nav--list {
+    margin-bottom: 180px;
+
+    &.menu__nav--item:hover,
+    &.menu__nav--item:focus {
+        color: var(--active-color);
+    }
+
+    ;
+}
+
+.menu__address--tel {
+    font-weight: 500;
+    @include font(34, 1.17, 0.02);
+    text-align: left;
+    color: var(--active-color);
+    margin-bottom: 32px;
+
+}
+
+.menu__address--mail {
+    font-family: 'Roboto' sans-serif;
+    font-weight: 500;
+    @include font(24, 1.16, 0.02);
+    color: #757575;
+
+}
+
+.menu__addr {
+    margin-bottom: 32px;
+}
+
+.menu__cos--item {
+
+    &:not(:last-child) {
+        margin-right: 20px;
+        border-right: 1px solid #757575;
+    }
+
+    ;
+}
+
+.menu__cos--link {
+    font-family: 'Roboto' sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+    @include font(18, 1.22, 0.02);
+    line-height: 100%;
+    color: var(--active-color);
+    padding-right: 10px;
+
+}
+
+.menu__cos--list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 64px;
+}*/
 @media screen and (min-width: 768px) {
-  .menu__button {
+  .mobile-menu__wrap {
     display: none;
   }
 }
 
-.menu__button .icon__menu {
-  display: none;
-}
-
-.menu__button.is-open .icon__menu {
-  display: block;
-}
-
-.menu__button.is-open .icon__close {
-  display: none;
-}
-
-.menu__container {
-  display: none;
-  background-color: white;
-  padding: 40px 48px;
-  text-align: left;
+.mobile-menu__container {
   position: fixed;
-  top: 0px;
-  left: 0px;
   width: 100vw;
   height: 100vh;
-  z-index: 1000;
-  overflow-y: scroll;
-}
-.menu__container.is-open {
-  display: block;
-}
-
-.menu__container.is-open .icon__close {
-  display: block;
-}
-
-.menu__content {
-  height: 100vh;
-  width: 100%;
-  margin: 0px auto;
-  padding: 0 15px;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  padding-left: 40px;
+  z-index: 999;
+  overflow: auto;
 }
 
 .menu__nav--item {
@@ -383,6 +487,7 @@ a.header__nav--logo:hover, a.header__nav--logo:focus {
 
 .menu__nav--list {
   margin-bottom: 180px;
+  margin-block-start: 0px;
 }
 .menu__nav--list.menu__nav--item:hover, .menu__nav--list.menu__nav--item:focus {
   color: var(--active-color);
@@ -413,6 +518,7 @@ a.header__nav--logo:hover, a.header__nav--logo:focus {
 
 .menu__cos--item:not(:last-child) {
   margin-right: 20px;
+  border-right: 1px solid #757575;
 }
 
 .menu__cos--link {
@@ -424,7 +530,6 @@ a.header__nav--logo:hover, a.header__nav--logo:focus {
   letter-spacing: 0.02em;
   line-height: 100%;
   color: var(--active-color);
-  border-right: 1px solid #757575;
   padding-right: 10px;
 }
 
@@ -434,6 +539,39 @@ a.header__nav--logo:hover, a.header__nav--logo:focus {
   flex-wrap: wrap;
   width: 100%;
   margin-top: 64px;
+}
+
+.mobile-menu__button--open,
+.mobile-menu__button--close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  border: none;
+  background-color: transparent;
+  display: block;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-menu__button--open {
+    display: none;
+  }
+}
+.mobile-menu__button--open:hover, .mobile-menu__button--open:focus {
+  fill: var(--active-color);
+}
+
+.mobile-menu__button--close:hover, .mobile-menu__button--close:focus {
+  fill: var(--active-color);
+}
+
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
 }
 
 .hero {
@@ -1111,11 +1249,6 @@ a.header__nav--logo:hover, a.header__nav--logo:focus {
   border-radius: 4px;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   padding: 40px 40px;
-}
-@media screen and (max-width: 480px) {
-  .modal {
-    width: 95%;
-  }
 }
 @media screen and (min-width: 1200px) {
   .modal {

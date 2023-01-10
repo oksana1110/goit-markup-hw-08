@@ -1,13 +1,14 @@
 .head{
     padding: auto 200px}
 .header {
-   
+   position: relative;
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    
     @media screen and (min-width: 768px){
         align-items: center;
-        justify-content: space-around;};
+        justify-content: space-between;};
 @media screen and (min-width: 1200px){
     display: flex;
     align-items: center;
@@ -92,9 +93,7 @@ a.header__nav--logo {
     color: var(--active-color);
 
 }
-.header{
-    position: relative;
-}
+
 .header__nav--item {
     margin-right: 50px;
             &:last-child {
@@ -176,11 +175,12 @@ a.header__nav--logo {
         @include font(14, 1.14, 0.02);
         line-height: 100%;
         color: #757575;
-@media screen and (min-width: 768px) {
-        margin-bottom: 10px;
-    };
+@media screen and (max-width: 1199px) {
+        &:not(:last-child){
+            margin-bottom: 10px;
+    };}
         @media screen and (min-width: 1200px){
             margin-bottom: 0px;
-        }
+        };
 }
 

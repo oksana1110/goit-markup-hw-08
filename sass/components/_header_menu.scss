@@ -1,6 +1,6 @@
 
 
-.menu__button {
+/*.menu__button {
     display: inline-flex;
     align-items: flex-end;
     margin: 0px;
@@ -11,23 +11,15 @@
     &:hover .icon__menu,
     &:focus .icon__menu {
         fill: (var(--active-color));
-    }
-
-    ;
-    ;
-
+    };
     &:hover .icon__close,
     &:focus .icon__close {
         fill: (var(--active-color));
-    }
-
-    ;
+    };
 
     @media screen and (min-width: 768px) {
         display: none;
-    }
-
-    ;
+    };
 }
 
 .menu__button .icon__menu {
@@ -44,25 +36,33 @@
 
 .menu__container {
     display: none;
-    background-color: #ffff;
+    background-color: rgba(255, 255, 255, 0.655);
     padding: 40px 48px;
     text-align: left;
     position: fixed;
-    top: 0px;
+    top: 50px;
     left: 0px;
     width: 100vw;
     height: 100vh;
-    z-index: 1000;
+    z-index: 1;
+    
 overflow-y: scroll;
-        &.is-open {
-        display: block;
-
-           };
+        
 
 }
-.menu__container.is-open .icon__close{
-    display: block;
+.is-hidden{
+    opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        
 }
+.menu__container{
+    opacity: 1;
+    visibility: visible;
+    pointer-events: initial;
+}
+
+
 .menu__content{
     height: 100vh;
         width: 100%;
@@ -123,6 +123,7 @@ overflow-y: scroll;
 
     &:not(:last-child) {
         margin-right: 20px;
+        border-right: 1px solid #757575;
     }
 
     ;
@@ -135,9 +136,110 @@ overflow-y: scroll;
     @include font(18, 1.22, 0.02);
     line-height: 100%;
     color: var(--active-color);
-    border-right: 1px solid #757575;
     padding-right: 10px;
+    
+}
 
+.menu__cos--list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 64px;
+}*/
+.mobile-menu__wrap {
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+}
+
+.mobile-menu__container {
+   
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+
+    background-color: #fff;
+
+    padding-top: 48px;
+    padding-bottom: 48px;
+    padding-left: 40px;
+z-index: 999;
+    overflow: auto;
+    
+}
+
+
+.menu__nav--item {
+    font-family: 'Roboto' sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+    @include font(40, 1.17, 0.02);
+    line-height: 100%;
+    text-align: left;
+    color: #212121;
+    margin-bottom: 32px;
+
+    &:last-child {
+        margin-bottom: 0px;
+    }
+
+    ;
+}
+
+.menu__nav--list {
+    margin-bottom: 180px;
+    margin-block-start: 0px;
+
+    &.menu__nav--item:hover,
+    &.menu__nav--item:focus {
+        color: var(--active-color);
+    }
+
+    ;
+}
+
+.menu__address--tel {
+    font-weight: 500;
+    @include font(34, 1.17, 0.02);
+    text-align: left;
+    color: var(--active-color);
+    margin-bottom: 32px;
+
+}
+
+.menu__address--mail {
+    font-family: 'Roboto' sans-serif;
+    font-weight: 500;
+    @include font(24, 1.16, 0.02);
+    color: #757575;
+
+}
+
+.menu__addr {
+    margin-bottom: 32px;
+}
+
+.menu__cos--item {
+
+    &:not(:last-child) {
+        margin-right: 20px;
+        border-right: 1px solid #757575;
+    }
+
+    ;
+}
+
+.menu__cos--link {
+    font-family: 'Roboto' sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+    @include font(18, 1.22, 0.02);
+    line-height: 100%;
+    color: var(--active-color);
+    padding-right: 10px;
 
 }
 
@@ -147,4 +249,43 @@ overflow-y: scroll;
     flex-wrap: wrap;
     width: 100%;
     margin-top: 64px;
+}
+
+
+//mobile menu button
+.mobile-menu__button--open,
+.mobile-menu__button--close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    border: none;
+    background-color: transparent;
+    display: block;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+       }
+.mobile-menu__button--open{
+    @media screen and (min-width: 768px) {
+            display: none;
+        }
+    
+        ;
+
+    &:hover,
+    &:focus {
+        fill: var(--active-color);
+    }
+}
+.mobile-menu__button--close{
+    &:hover,
+        &:focus {
+            fill: var(--active-color);
+        }
+}
+.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
 }
